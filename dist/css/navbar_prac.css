@@ -1,10 +1,10 @@
 body,html {
   margin:0;
   padding:0;
-  font-family: "Adobe Garamond Pro", Georgia, Serif;;
+/*  font-family: "Adobe Garamond Pro", Georgia, Serif;;*/
 }
 
-p{
+.content{
   padding-top: 8em;
 }
 
