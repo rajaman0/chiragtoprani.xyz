@@ -12,7 +12,7 @@ jQuery(document).ready(function($) {
             $(".left").removeClass("leftundo");
             $(".label").addClass('after');
             $(".name").addClass('after');
-            $("body").addClass('after');
+            $(".navbar").addClass('after');
             /*$(".label").removeClass('after').addClass('after');
             $(".navlist").removeClass('after').addClass('after');
             $("#main").removeClass('after').addClass('after');*/
@@ -23,15 +23,14 @@ jQuery(document).ready(function($) {
         } else {
             $(".label").removeClass('after');
             $(".name").removeClass('after');
-            $("body").removeClass('after');
+            $(".navbar").removeClass('after');
 
 
            /* $(".label").removeClass('after');
             $(".navlist").removeClass('after');
-            $("#main").removeClass('after');     */      
+            $("#main").removeClass('after');     */
 
 
         }
     });
 });
-
