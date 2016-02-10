@@ -1,6 +1,11 @@
 body,html {
   margin:0;
   padding:0;
+  position:absolute;
+  background-color: black;
+  color: white;
+  width:100%;
+  margin:0;
 /*  font-family: "Adobe Garamond Pro", Georgia, Serif;;*/
 }
 
@@ -8,22 +13,63 @@ body,html {
   padding-top: 8em;
 }
 
-.navbar {
+section {
+  height:100vh;
+  margin:0;
+  position:relative;
+}
+
+nav .head{
+  text-align: center;
+}
+
+#navbar-main.fixed {
   position:fixed;
+  top:50%;
+}
+
+#navbar-main.absolute {
+  position:absolute;
+  bottom:0;
+}
+
+#navbar-main.fixednav {
+  position:fixed;
+  margin: 0,auto;
+  top:0;
+  bottom:auto;
+}
+
+#navbar-links.fixednav {
+  position:fixed;
+  margin: 0,auto;
+  bottom:auto;
+}
+
+
+.navbar {
   width:100%;
-  margin-top: 0;
+  margin: auto;
   border: 0;
 
+  background-color: grey;
+  float:center;
+  text-align: center;
 }
 
 
-.navbar.after {
-  -webkit-transform-origin: scale(1,.5  );
-  -moz-transform-origin: scale(1,.5);
-  -o-transform-origin: scale(1,.5);
-  transform-origin: scale(1,.5);
+.navlist {
+  margin:0 auto;
+  width: 100%;
+  text-align: center;
+  padding: 10px
 }
 
+.fixed {
+  position:fixed;
+
+  z-index:999;
+}
 
 .navbar *{
   -webkit-transition: all 0.5s ease-out;
@@ -36,7 +82,6 @@ body,html {
   -o-transform: translateZ(0);
   transform: translateZ(0);
 
-
 }
 
 .name{
@@ -44,34 +89,26 @@ body,html {
   display:inline-block;
   font-size: 4em;
   float:center;
-
-
 }
 
-.name.after {
+.mainpage .name.after {
   -webkit-transform: scale(.7);
   -moz-transform: scale(.7);
   -o-transform: scale(.7);
   transform: scale(.7);
 }
 
+.about .label {
 
-.label {
   display: inline-block;
   font-size: 1.4em;
   padding-right: 4em;
   padding-left: 4em;
-  color:black;
   font-weight:  300; /*400 is normal */
-  max-width: 25 em;
 
 }
 
-.after {
-
-}
-
-.rightundo {
+.about .rightundo {
   -webkit-transform: translate(10em,3em); /* Safari */
   -moz-transform: translate(10em,3em); /* IE 10 */
   -o-transform: translate(10em,3em);
@@ -79,7 +116,7 @@ body,html {
 
 }
 
-.leftundo {
+.about .leftundo {
   -webkit-transform: translate(-12em,3em); /* Safari */
   -moz-transform: translate(-12em,3em); /* IE 10 */
   -o-transform: translate(-12em,3em);
@@ -87,14 +124,7 @@ body,html {
 
 }
 
-
-
-
-
-
-
-
-.label.after.left{
+.about .label.after.left{
   position: relative;
   /*font-size: .6em;
   /*right:6%;*/
@@ -107,21 +137,12 @@ body,html {
 
 }
 
-.label.after.right{
+.about .label.after.right{
   position: relative;
   /*font-size: .6em;*/
   -webkit-transform: translate(7em,-2.6em) scale(.8); /* Safari */
   -moz-transform: translate(7em,-2.6em) scale(.8); /* IE 10 */
   -o-transform: translate(7em,-2.6em) scale(.8);
   transform: translate(7em,-2.6em) scale(.8);
-
-}
-
-
-
-nav .head{
-  padding-top: 1em;
-  background-color: white;
-  text-align: center;
 
 }
