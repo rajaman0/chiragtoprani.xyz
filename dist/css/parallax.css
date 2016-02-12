@@ -1,0 +1,28 @@
+section {
+  -webkit-transition: all 0.5s ease-out;
+  -moz-transition: all 0.5s ease-out;
+  -o-transition: all 0.5s ease-out;
+  transition: all 0.5s ease-out;
+  box-shadow: 0 0 50px rgba(0,0,0,0.8);
+}
+
+section.removeShadow{
+  -webkit-transition: all 0.5s ease-out;
+  -moz-transition: all 0.5s ease-out;
+  -o-transition: all 0.5s ease-out;
+  transition: all 0.5s ease-out;
+  box-shadow: 0 0 0px rgba(0,0,0,0.8);
+
+}
+
+.background {
+    height: 100%;
+    margin: 0 auto;
+    width: 100%;
+    position: relative;
+}
+
+.mainpage .background {
+  background: url(../images/backgroundmain.jpg) 50% 0 fixed;
+
+}
