@@ -1,11 +1,11 @@
 /*! Main */
 jQuery(document).ready(function($) {
 
+
   $(window).on('beforeunload', function() {
     $(window).scrollTop(0);
 });
   //  space.height(originalheight + 'em');
-
     var navbarmain = $('#navbar-main'),
         distance = navbarmain.offset().top,
         $window = $(window);
@@ -13,14 +13,16 @@ jQuery(document).ready(function($) {
 
     var navigation = $('#navbar-links'),
         navoffset = navigation.offset().top;
-
     distancebetween = navoffset - distance - navbarmain.height();
 
     var paddT = $('.content').css('padding-top');
     console.log(paddT);
 
     var padding = false;
+    var num = 0;
+    var height;
     $window.scroll(function() {
+
         if ($window.scrollTop() > distance) {
           //  $(".right").removeClass("rightundo");
           //  $(".left").removeClass("leftundo");
@@ -67,7 +69,7 @@ jQuery(document).ready(function($) {
             navigation.css({top:newtop});
 
             if ($window.scrollTop() <= navoffset ){
-              var height = $window.scrollTop() -  $('#space').offset().top +navbarmain.height() + navigation.height();
+              height = $window.scrollTop() -  $('#space').offset().top +navbarmain.height() + navigation.height();
               $('#space').height(height);
             }
 
@@ -75,13 +77,17 @@ jQuery(document).ready(function($) {
             navbarmain.removeClass('fixednav');
             navigation.removeClass('fixednav');
             navigation.css({top:''});
-
+            $('#space').height(0);
           }
 
           if ($window.scrollTop() >= navoffset){
             //var newpadding = $window.scrollTop() - (navoffset - navbarmain.height() - navigation.height()) + paddT;
             //$('.content').css("padding-top", newpadding);
             //animations
+            //later record the elements as variables
+
+            $('#space').height(navigation.height());
+
              $(".name").addClass('after');
              $(".right").removeClass("rightundo");
              $(".left").removeClass("leftundo");

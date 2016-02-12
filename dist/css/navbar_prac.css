@@ -24,9 +24,8 @@ section {
   height:100vh;
   margin:0;
   position:relative;
-  /*border: black;
   border-style: solid;
-  border-color:yellow;*/
+  border-color:yellow;
 }
 
 .mainpage {
